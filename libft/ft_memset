@@ -1,0 +1,30 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        ::::::::            */
+/*   ft_memset.c                                        :+:    :+:            */
+/*                                                     +:+                    */
+/*   By: mvan-hou <marvin@codam.nl>                   +#+                     */
+/*                                                   +#+                      */
+/*   Created: 2019/03/21 15:22:53 by mvan-hou      #+#    #+#                 */
+/*   Updated: 2019/03/27 14:56:03 by mvan-hou      ########   odam.nl         */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include <string.h>
+
+void	*ft_memset(void *b, int c, size_t len)
+{
+	unsigned char *s;
+
+	if (len > 0 && b != NULL)
+	{
+		s = (unsigned char*)b;
+		while (len > 0)
+		{
+			*s = (unsigned char)c;
+			s++;
+			len--;
+		}
+	}
+	return (b);
+}
